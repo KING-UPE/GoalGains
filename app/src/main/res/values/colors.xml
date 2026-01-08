@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_primary">#FFFFFF</color>
+    <color name="background_secondary">#F0F4F9</color>
+
+    <color name="text_primary">#1C2025</color>
+    <color name="text_secondary">#6C757D</color>
+
+    <color name="primary_brand">#0D6EFD</color>
+    <color name="primary_light">#E7F0FF</color>
+
+    <color name="accent_pink">#F45B69</color>
+    <color name="success_green">#28A745</color>
+    <color name="error_red">#DC3545</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="progress_track_color">#E0E0E0</color>
+    <color name="macro_carbs">#28A745</color>
+    <color name="macro_protein">#FFC107</color>
+    <color name="macro_fat">#8A63D2</color>
+
+    <color name="streak_icon_background">#E8E0F9</color>
+    <color name="streak_icon_tint">#5E35B1</color>
+    <!-- ### FIX: ADDED MISSING COLORS HERE ### -->
+    <color name="dark_blue">#0D47A1</color> <!-- A deep blue -->
+    <color name="dark_blue_variant">#002171</color> <!-- A darker variant -->
+    <color name="orange_accent">#FF6D00</color> <!-- A bright orange -->
+    <color name="orange_accent_variant">#C43C00</color> <!-- A darker orange -->
+    <color name="gray">#BDBDBD</color> <!-- A medium gray -->
+
+    <color name="statusBarColor">#0D6EFD</color> <!-- Or a light theme color -->
+
+
+
+</resources>

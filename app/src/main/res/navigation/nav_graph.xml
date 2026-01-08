@@ -1,0 +1,351 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/nav_graph"
+
+    app:startDestination="@id/navigation_dashboard">
+
+
+
+    <action
+
+        android:id="@+id/action_global_authChoiceFragment"
+
+        app:destination="@id/navigation_auth_choice" />
+
+
+
+    <fragment
+
+        android:id="@+id/navigation_auth_choice"
+
+        android:name="com.example.myapplication.AuthChoiceFragment"
+
+        android:label="Authentication Choice"
+
+        tools:layout="@layout/fragment_auth_choice">
+
+        <action
+
+            android:id="@+id/action_authChoiceFragment_to_loginFragment"
+
+            app:destination="@id/navigation_login" />
+
+        <action
+
+            android:id="@+id/action_authChoiceFragment_to_registerStep1Fragment"
+
+            app:destination="@id/navigation_register_step1" />
+
+    </fragment>
+
+
+
+    <fragment
+
+        android:id="@+id/navigation_login"
+
+        android:name="com.example.myapplication.LoginFragment"
+
+        android:label="Login"
+
+        tools:layout="@layout/fragment_login">
+
+        <action
+
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+
+            app:destination="@id/navigation_dashboard"
+
+            app:popUpTo="@id/navigation_dashboard"
+
+            app:popUpToInclusive="true" />
+
+        <!-- Action to go TO register from login -->
+
+        <action
+
+            android:id="@+id/action_loginFragment_to_registerStep1Fragment"
+
+            app:destination="@id/navigation_register_step1"
+
+            app:popUpTo="@id/navigation_auth_choice"/> <!-- Pop back to choice screen before going to register -->
+
+    </fragment>
+
+
+
+    <fragment
+
+        android:id="@+id/navigation_register_step1"
+
+        android:name="com.example.myapplication.RegisterStep1Fragment"
+
+        android:label="Register Step 1"
+
+        tools:layout="@layout/fragment_register_step1">
+
+        <!-- Action to go TO login from register -->
+
+        <action
+
+            android:id="@+id/action_registerStep1Fragment_to_loginFragment"
+
+            app:destination="@id/navigation_login"
+
+            app:popUpTo="@id/navigation_auth_choice"/> <!-- Pop back to choice screen before going to login -->
+
+        <action
+
+            android:id="@+id/action_registerStep1Fragment_to_registerStep2Fragment"
+
+            app:destination="@id/navigation_register_step2" />
+
+    </fragment>
+
+
+
+    <fragment
+
+        android:id="@+id/navigation_register_step2"
+
+        android:name="com.example.myapplication.RegisterStep2Fragment"
+
+        android:label="Register Step 2"
+
+        tools:layout="@layout/fragment_register_step2">
+
+        <action
+
+            android:id="@+id/action_registerStep2Fragment_to_dashboardFragment"
+
+            app:destination="@id/navigation_dashboard"
+
+            app:popUpTo="@id/navigation_dashboard"
+
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+
+
+    <!-- 2. MAIN APP FLOW -->
+
+
+
+    <fragment
+
+        android:id="@+id/navigation_dashboard"
+
+        android:name="com.example.myapplication.DashboardFragment"
+
+        android:label="Dashboard"
+
+        tools:layout="@layout/fragment_dashboard">
+
+        <!-- Conditional Navigation from Profile Icon -->
+
+        <action
+
+            android:id="@+id/action_dashboardFragment_to_profileFragment"
+
+            app:destination="@id/navigation_profile" />
+
+        <action
+
+            android:id="@+id/action_dashboardFragment_to_authChoiceFragment"
+
+            app:destination="@id/navigation_auth_choice" />
+
+        <!-- Action to navigate to foods -->
+
+        <action
+
+            android:id="@+id/action_dashboard_to_foods"
+
+            app:destination="@id/navigation_foods" />
+
+    </fragment>
+
+
+
+    <fragment
+
+        android:id="@+id/navigation_profile"
+
+        android:name="com.example.myapplication.ProfileFragment"
+
+        android:label="Profile"
+
+        tools:layout="@layout/fragment_profile">
+
+        <!-- Action for logout - uses global action now -->
+
+    </fragment>
+
+
+
+    <fragment
+
+        android:id="@+id/navigation_foods"
+
+        android:name="com.example.myapplication.FoodsFragment"
+
+        android:label="Foods"
+
+        tools:layout="@layout/fragment_foods" >
+
+        <action
+
+            android:id="@+id/action_foodsFragment_to_foodDetailFragment"
+
+            app:destination="@id/navigation_food_detail" />
+
+        <argument
+
+            android:name="focus_search"
+
+            app:argType="boolean"
+
+            android:defaultValue="false" />
+
+    </fragment>
+
+
+
+    <fragment
+
+        android:id="@+id/navigation_meals"
+
+        android:name="com.example.myapplication.MealsFragment"
+
+        android:label="Meals"
+
+        tools:layout="@layout/fragment_meals" />
+
+
+
+    <fragment
+
+        android:id="@+id/navigation_progress"
+
+        android:name="com.example.myapplication.ProgressFragment"
+
+        android:label="Progress"
+
+        tools:layout="@layout/fragment_progress" >
+
+        <action
+
+            android:id="@+id/action_navigation_progress_to_goalSetupAutoFragment"
+
+            app:destination="@id/navigation_goal_setup_auto" />
+
+        <action
+
+            android:id="@+id/action_navigation_progress_to_goalSetupManualFragment"
+
+            app:destination="@id/navigation_goal_setup_manual" />
+
+    </fragment>
+
+
+
+    <!-- 3. UTILITY FRAGMENTS (No changes needed here) -->
+
+    <fragment
+
+        android:id="@+id/navigation_food_detail"
+
+        android:name="com.example.myapplication.FoodDetailFragment"
+
+        android:label="fragment_food_detail"
+
+        tools:layout="@layout/fragment_food_detail">
+
+
+
+        <argument
+
+            android:name="food_item"
+
+            app:argType="com.example.myapplication.Food" />
+
+
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/navigation_add_meal"
+
+        android:name="com.example.myapplication.AddMealFragment"
+
+        android:label="Add Meal"
+
+        tools:layout="@layout/fragment_add_meal" >
+
+
+
+        <argument
+
+            android:name="selectedDate"
+
+            app:argType="string" />
+
+        <argument
+
+            android:name="selectedMealType"
+
+            app:argType="string"
+
+            android:defaultValue="Breakfast" />
+
+
+
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/navigation_goal_setup_auto"
+
+        android:name="com.example.myapplication.GoalSetupAutoFragment"
+
+        android:label="Automatic Goal Setup"
+
+        tools:layout="@layout/fragment_goal_setup_auto" />
+
+    <fragment
+
+        android:id="@+id/navigation_goal_setup_manual"
+
+        android:name="com.example.myapplication.GoalSetupManualFragment"
+
+        android:label="Manual Goal Setup"
+
+        tools:layout="@layout/fragment_goal_setup_manual" />
+
+
+
+    <!-- 4. GLOBAL ACTION -->
+
+    <!-- UPDATED: Logout now goes back to the Dashboard (as a non-logged-in user) -->
+
+    <action
+
+        android:id="@+id/action_global_logout"
+
+        app:destination="@id/navigation_dashboard"
+
+        app:popUpTo="@id/nav_graph"
+
+        app:popUpToInclusive="true" />
+
+
+
+</navigation>
+
+    <!--Genarated or errors are handled using Gemini AI-->

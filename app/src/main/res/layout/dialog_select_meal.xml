@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"> <LinearLayout
+    android:id="@+id/containerMeals"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_rounded_dialog"> <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Add to..."
+    android:textColor="@color/text_primary"
+    android:textSize="22sp"
+    android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Select a meal to log for today."
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogBreakfast"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Breakfast"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="20dp"
+            app:icon="@drawable/ic_food_placeholder"
+            app:iconPadding="16dp"
+            app:iconTint="@color/macro_carbs"
+            android:textColor="@color/text_primary"
+            app:strokeWidth="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogLunch"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Lunch"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="20dp"
+            app:icon="@drawable/ic_food_placeholder"
+            app:iconPadding="16dp"
+            app:iconTint="@color/macro_protein"
+            android:textColor="@color/text_primary"
+            app:strokeWidth="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogDinner"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Dinner"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="20dp"
+            app:icon="@drawable/ic_food_placeholder"
+            app:iconPadding="16dp"
+            app:iconTint="@color/macro_fat"
+            android:textColor="@color/text_primary"
+            app:strokeWidth="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDialogSnacks"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Snacks"
+            android:gravity="center_vertical|start"
+            android:paddingLeft="20dp"
+            app:icon="@drawable/ic_food_placeholder"
+            app:iconPadding="16dp"
+            app:iconTint="@color/text_secondary"
+            android:textColor="@color/text_primary"
+            app:strokeWidth="0dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancel"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
+
+</LinearLayout>
+
+    <!--Genarated or errors are handled using Gemini AI-->

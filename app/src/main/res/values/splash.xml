@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MyApp.Splash" parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenBackground">@color/background_primary</item>
+
+        <item name="windowSplashScreenAnimatedIcon">@drawable/load_logo</item>
+
+        <item name="postSplashScreenTheme">@style/AppTheme</item>
+
+    </style>
+
+</resources>
+
+    <!--Genarated or errors are handled using Gemini AI-->

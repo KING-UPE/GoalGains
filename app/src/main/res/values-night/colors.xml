@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark equivalents of your colors -->
+
+    <color name="background_primary">#1E1E1E</color>
+    <color name="background_secondary">#2C2C2E</color>
+
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+
+    <!-- Keep your same brand colors -->
+    <color name="primary_brand">#0D6EFD</color>
+    <color name="primary_light">#274B9F</color>
+
+    <color name="accent_pink">#F45B69</color>
+    <color name="success_green">#28A745</color>
+    <color name="error_red">#DC3545</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="progress_track_color">#424242</color>
+    <color name="macro_carbs">#28A745</color>
+    <color name="macro_protein">#FFC107</color>
+    <color name="macro_fat">#B39DDB</color>
+
+    <!-- ### FIX: ADDED MISSING COLORS HERE ### -->
+    <color name="dark_blue">#0D47A1</color> <!-- A deep blue -->
+    <color name="dark_blue_variant">#002171</color> <!-- A darker variant -->
+    <color name="orange_accent">#FF6D00</color> <!-- A bright orange -->
+    <color name="orange_accent_variant">#C43C00</color> <!-- A darker orange -->
+    <color name="gray">#BDBDBD</color> <!-- A medium gray -->
+
+    <color name="statusBarColor">#002171</color> <!-- Or a dark theme color -->
+
+
+
+</resources>
