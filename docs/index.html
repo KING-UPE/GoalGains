@@ -7,8 +7,11 @@
     <meta name="description" content="GoalGains - The ultimate Android app for tracking calories, macros, and fitness goals.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
     <link rel="stylesheet" href="assets/css/bootstrap-5.0.0-beta2.min.css">
+    
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
@@ -53,7 +56,6 @@
         </div>
       </div>
     </header>
-
     <section id="home" class="hero-section">
       <div class="container">
         <div class="row align-items-center">
@@ -76,7 +78,6 @@
         </div>
       </div>
     </section>
-
     <section id="feature" class="feature-section pt-140">
       <div class="container">
         <div class="row justify-content-center">
@@ -127,7 +128,6 @@
         </div>
       </div>
     </section>
-
     <section id="about" class="about-section pt-100 pb-100">
         <div class="container">
             <div class="row align-items-center">
@@ -152,14 +152,13 @@
             </div>
         </div>
     </section>
-
     <section id="demo" class="demo-section pt-100 pb-100">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xxl-6 col-xl-7 col-lg-8">
                     <div class="section-title text-center mb-50">
                         <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Try GoalGains Live</h1>
-                        <p class="wow fadeInUp" data-wow-delay=".4s">Interact with the actual app right here in your browser. No download required.</p>
+                        <p class="wow fadeInUp" data-wow-delay=".4s">Interact with the actual app right in your browser.</p>
                     </div>
                 </div>
             </div>
@@ -177,20 +176,33 @@
                             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
                             border: 12px solid #1a1a1a;
                             overflow: hidden;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
                         ">
                             <div style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 80px; height: 6px; background: #333; border-radius: 10px; z-index: 10;"></div>
                             
-                            <iframe 
-                                src="https://appetize.io/embed/b_6efhmlbjbqt4jmddxtcu7j4zna?device=pixel4&scale=75&orientation=portrait&osVersion=11.0&autoplay=false" 
-                                width="100%" 
-                                height="100%" 
-                                frameborder="0" 
-                                scrolling="no"
-                                style="border-radius: 28px; background-color: #000;">
-                            </iframe>
+                            <div style="text-align: center; color: white; padding: 20px;">
+                                <img src="assets/img/logo.svg" alt="GoalGains Logo" style="width: 80px; margin-bottom: 20px; opacity: 0.9;">
+                                <h4 style="margin-bottom: 30px; font-weight: 600;">GoalGains Demo</h4>
+                                
+                                <a href="https://appetize.io/app/b_6efhmlbjbqt4jmddxtcu7j4zna?device=pixel4&scale=75&orientation=portrait&osVersion=11.0" 
+                                   target="_blank" 
+                                   class="main-btn btn-hover"
+                                   style="padding: 12px 30px; font-size: 16px;">
+                                    <i class="fa-solid fa-play me-2"></i> Launch App
+                                </a>
+                                
+                                <p style="margin-top: 20px; font-size: 12px; color: #888;">
+                                    Opens in a new secure window<br>to bypass embed limits.
+                                </p>
+                            </div>
                         </div>
-                        <p class="mt-4 text-muted small"><i class="fa-solid fa-hand-pointer me-2"></i>Tap "Tap to Play" to launch the emulator</p>
-                        <p class="text-muted" style="font-size: 12px;">(Powered by Appetize.io Free Tier - Session times may vary)</p>
+                        <p class="mt-4 text-muted small">
+                            <i class="fa-solid fa-mobile-screen me-2"></i>
+                            Tap "Launch App" to start the interactive preview
+                        </p>
                     </div>
                 </div>
             </div>
@@ -210,7 +222,6 @@
             </div>
         </div>
     </section>
-
     <footer id="footer" class="footer">
           <div class="container">
             
@@ -278,7 +289,6 @@
         </div>
       </div>
     </footer>
-
     <a href="#" class="scroll-top btn-hover">
       <i class="fa-solid fa-chevron-up"></i>
     </a> 
